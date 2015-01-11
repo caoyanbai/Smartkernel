@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D9CE760-5700-4800-BA5D-579A8C71C81A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Smartkernel.Framework</RootNamespace>
+    <AssemblyName>Smartkernel.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Smartkernel.Framework.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="xcopy &quot;${TargetDir}\${TargetName}&quot; &quot;${SolutionDir}\Build\${ProjectName}\&quot; /i /s /e /y" />
+      </CustomCommands>
+    </CustomCommands>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Smartkernel.Framework.xml</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="xcopy &quot;${TargetDir}\${TargetName}&quot; &quot;${SolutionDir}\Build\${ProjectName}\&quot; /i /s /e /y" />
+      </CustomCommands>
+    </CustomCommands>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChnCharInfo">
+      <HintPath>..\..\..\..\Library\CSharp\ChnCharInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="hive-sharp-lib">
+      <HintPath>..\..\..\..\Library\CSharp\hive-sharp-lib.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>..\..\..\..\Library\CSharp\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\..\..\..\Library\CSharp\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADODB">
+      <HintPath>..\..\..\..\Library\CSharp\Interop.ADODB.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.CDO">
+      <HintPath>..\..\..\..\Library\CSharp\Interop.CDO.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\..\Library\CSharp\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="LumiSoft.Net">
+      <HintPath>..\..\..\..\Library\CSharp\LumiSoft.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Memcached.ClientLibrary">
+      <HintPath>..\..\..\..\Library\CSharp\Memcached.ClientLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\..\Library\CSharp\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\..\..\Library\CSharp\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="NSoup">
+      <HintPath>..\..\..\..\Library\CSharp\NSoup.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenExcel">
+      <HintPath>..\..\..\..\Library\CSharp\OpenExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess">
+      <HintPath>..\..\..\..\Library\CSharp\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\..\..\Library\CSharp\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thrift">
+      <HintPath>..\..\..\..\Library\CSharp\Thrift.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="AntiXssLibrary">
+      <HintPath>..\..\..\..\Library\CSharp\AntiXSSLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.SourceSafe.Interop">
+      <HintPath>..\..\..\..\Library\CSharp\Microsoft.VisualStudio.SourceSafe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.10.0">
+      <HintPath>..\..\..\..\Library\CSharp\Microsoft.VisualStudio.TextTemplating.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0">
+      <HintPath>..\..\..\..\Library\CSharp\Microsoft.VisualStudio.TextTemplating.Interfaces.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Modeling.10.0">
+      <HintPath>..\..\..\..\Library\CSharp\Microsoft.VisualStudio.TextTemplating.Modeling.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.VSHost.10.0">
+      <HintPath>..\..\..\..\Library\CSharp\Microsoft.VisualStudio.TextTemplating.VSHost.10.0.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Library\CSharp\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.SqlServerCe">
+      <HintPath>..\..\..\..\Library\CSharp\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity">
+      <HintPath>..\..\..\..\Library\CSharp\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddIn\SmartAddIn.cs" />
+    <Compile Include="AddIn\SmartAddInAttribute.cs" />
+    <Compile Include="Apple\SmartApn.cs" />
+    <Compile Include="CodeDom\SmartCompiler.cs" />
+    <Compile Include="Collections\ObjectModel\SmartReadOnlyDictionary.cs" />
+    <Compile Include="Collections\SmartCollection.cs" />
+    <Compile Include="Collections\SmartDictionary.cs" />
+    <Compile Include="Computer\Info\SmartBaseBoardInfo.cs" />
+    <Compile Include="Computer\Info\SmartBiosInfo.cs" />
+    <Compile Include="Computer\Info\SmartCdRomInfo.cs" />
+    <Compile Include="Computer\Info\SmartDesktopMonitorInfo.cs" />
+    <Compile Include="Computer\Info\SmartDiskDriveInfo.cs" />
+    <Compile Include="Computer\Info\SmartInfo.cs" />
+    <Compile Include="Computer\Info\SmartLogicalDiskInfo.cs" />
+    <Compile Include="Computer\Info\SmartOperatingSystemInfo.cs" />
+    <Compile Include="Computer\Info\SmartPhysicalMemoryInfo.cs" />
+    <Compile Include="Computer\Info\SmartProcessorInfo.cs" />
+    <Compile Include="Computer\Info\SmartQuickFixEngineeringInfo.cs" />
+    <Compile Include="Computer\Info\SmartShareInfo.cs" />
+    <Compile Include="Computer\Info\SmartSoundDeviceInfo.cs" />
+    <Compile Include="Computer\Info\SmartStartupInfo.cs" />
+    <Compile Include="Computer\Info\SmartSystemInfo.cs" />
+    <Compile Include="Computer\Info\SmartVideoControllerInfo.cs" />
+    <Compile Include="Computer\SmartAvailabilityType.cs" />
+    <Compile Include="Computer\SmartComputer.cs" />
+    <Compile Include="Computer\SmartFormFactorType.cs" />
+    <Compile Include="Computer\SmartMemoryType.cs" />
+    <Compile Include="Computer\SmartWindowsEditionType.cs" />
+    <Compile Include="Computer\SmartWindowsVersionType.cs" />
+    <Compile Include="Configuration\SmartConfigurationManager.cs" />
+    <Compile Include="Data\SmartDatabase.cs" />
+    <Compile Include="Data\SmartDatabaseType.cs" />
+    <Compile Include="Data\SmartDbDateTime.cs" />
+    <Compile Include="Data\SmartDbTypeMap.cs" />
+    <Compile Include="Data\SmartDynamicDataRow.cs" />
+    <Compile Include="Data\SmartMySql.cs" />
+    <Compile Include="Data\SmartOdbc.cs" />
+    <Compile Include="Data\SmartOleDb.cs" />
+    <Compile Include="Data\SmartOracle.cs" />
+    <Compile Include="Data\SmartPostgreSql.cs" />
+    <Compile Include="Data\SmartSQLite.cs" />
+    <Compile Include="Data\SmartSqlServer.cs" />
+    <Compile Include="Data\SmartSqlCe.cs" />
+    <Compile Include="Data\SmartSqlServerCommand.cs" />
+    <Compile Include="Diagnostics\SmartAppContext.cs" />
+    <Compile Include="Diagnostics\SmartProcess.cs" />
+    <Compile Include="Diagnostics\SmartStopwatch.cs" />
+    <Compile Include="Diagnostics\SmartTraceType.cs" />
+    <Compile Include="Drawing\SmartColor.cs" />
+    <Compile Include="Drawing\SmartImage.cs" />
+    <Compile Include="IO\SmartDirectory.cs" />
+    <Compile Include="IO\SmartFile.cs" />
+    <Compile Include="IO\SmartFileAssociation.cs" />
+    <Compile Include="IO\SmartFileType.cs" />
+    <Compile Include="IO\SmartGZip.cs" />
+    <Compile Include="IO\SmartGZip2.cs" />
+    <Compile Include="IO\SmartRar.cs" />
+    <Compile Include="IO\SmartZip.cs" />
+    <Compile Include="LoadBalance\SmartHashRouter.cs" />
+    <Compile Include="LoadBalance\SmartProcessor.cs" />
+    <Compile Include="LoadBalance\SmartRoundRobinProcessor.cs" />
+    <Compile Include="LoadBalance\SmartRoundRobinRouter.cs" />
+    <Compile Include="LoadBalance\SmartRouter.cs" />
+    <Compile Include="Management\SmartWin32ClassType.cs" />
+    <Compile Include="Management\SmartWmi.cs" />
+    <Compile Include="Messaging\SmartMessage.cs" />
+    <Compile Include="Messaging\SmartMessageQueue.cs" />
+    <Compile Include="Net\SmartFtpClient.cs" />
+    <Compile Include="Net\SmartFtpClientConfig.cs" />
+    <Compile Include="Net\SmartIPAddress.cs" />
+    <Compile Include="Net\SmartIPEndPoint.cs" />
+    <Compile Include="Net\SmartIPRegion.cs" />
+    <Compile Include="Net\SmartMailInfo.cs" />
+    <Compile Include="Net\SmartNet.cs" />
+    <Compile Include="Net\SmartPop3Client.cs" />
+    <Compile Include="Net\SmartPop3ClientConfig.cs" />
+    <Compile Include="Net\SmartSmtpClient.cs" />
+    <Compile Include="Net\SmartSmtpClientConfig.cs" />
+    <Compile Include="Net\SmartSocket.cs" />
+    <Compile Include="ObjectPool\SmartAutoOverTimeConcurrentDictionaryObjectPool.cs" />
+    <Compile Include="ObjectPool\SmartAutoOverTimeConcurrentDictionaryObjectPoolValue.cs" />
+    <Compile Include="ObjectPool\SmartAutoOverTimeFileConcurrentDictionaryObjectPool.cs" />
+    <Compile Include="Office\SmartCsv.cs" />
+    <Compile Include="Office\SmartExcel.cs" />
+    <Compile Include="Reflection\SmartAssembly.cs" />
+    <Compile Include="Reflection\SmartAssemblyInfo.cs" />
+    <Compile Include="Reflection\SmartRemoteAssemblyProxy.cs" />
+    <Compile Include="Runtime\SmartSerialization.cs" />
+    <Compile Include="Runtime\SmartSerializationFormatType.cs" />
+    <Compile Include="Security\SmartAes.cs" />
+    <Compile Include="Security\SmartDes.cs" />
+    <Compile Include="Security\SmartHashAlgorithm.cs" />
+    <Compile Include="Security\SmartHashAlgorithmType.cs" />
+    <Compile Include="Security\SmartRsa.cs" />
+    <Compile Include="Security\SmartRsaKey.cs" />
+    <Compile Include="ServiceProcess\SmartIis.cs" />
+    <Compile Include="ServiceProcess\SmartService.cs" />
+    <Compile Include="SmartAction.cs" />
+    <Compile Include="SmartAnnouncer.cs" />
+    <Compile Include="SmartAnonymousObject.cs" />
+    <Compile Include="SmartAppDomain.cs" />
+    <Compile Include="SmartArea.cs" />
+    <Compile Include="SmartArray.cs" />
+    <Compile Include="SmartAssert.cs" />
+    <Compile Include="SmartAsyncType.cs" />
+    <Compile Include="SmartByte.cs" />
+    <Compile Include="SmartCalendar.cs" />
+    <Compile Include="SmartCalendarItem.cs" />
+    <Compile Include="SmartCompare.cs" />
+    <Compile Include="SmartCorporationInfo.cs" />
+    <Compile Include="SmartDynamicAnonymousObject.cs" />
+    <Compile Include="SmartEmptyObject.cs" />
+    <Compile Include="SmartEnum.cs" />
+    <Compile Include="SmartGeneric.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SmartGuid.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SmartHashCode.cs" />
+    <Compile Include="SmartMath.cs" />
+    <Compile Include="SmartMessageText.cs" />
+    <Compile Include="SmartContainer.cs" />
+    <Compile Include="SmartConvert.cs" />
+    <Compile Include="SmartDateTime.cs" />
+    <Compile Include="SmartDivideLine.cs" />
+    <Compile Include="SmartEditionStateType.cs" />
+    <Compile Include="SmartException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmartDimension.cs" />
+    <Compile Include="SmartMobilePhone.cs" />
+    <Compile Include="SmartMoney.cs" />
+    <Compile Include="SmartNumeric.cs" />
+    <Compile Include="SmartObject.cs" />
+    <Compile Include="SmartOS.cs" />
+    <Compile Include="SmartRandom.cs" />
+    <Compile Include="SmartResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartSequenceNumber.cs" />
+    <Compile Include="SmartString.cs" />
+    <Compile Include="SmartType.cs" />
+    <Compile Include="SmartUri.cs" />
+    <Compile Include="Sms\SmartNetworkSms.cs" />
+    <Compile Include="Sms\SmartSiemensSms.cs" />
+    <Compile Include="Svn\SmartSvnItem.cs" />
+    <Compile Include="Svn\SmartSvnManager.cs" />
+    <Compile Include="Template\SmartEngine.cs" />
+    <Compile Include="Template\SmartEngineHost.cs" />
+    <Compile Include="Template\SmartTemplate.cs" />
+    <Compile Include="Text\SmartBase64.cs" />
+    <Compile Include="Text\SmartEncoding.cs" />
+    <Compile Include="Text\SmartHex.cs" />
+    <Compile Include="Text\SmartNumber32.cs" />
+    <Compile Include="Text\SmartRegex.cs" />
+    <Compile Include="Text\SmartText.cs" />
+    <Compile Include="Vss\SmartVssItem.cs" />
+    <Compile Include="Vss\SmartVssManager.cs" />
+    <Compile Include="Web\Mvc\Routing\Constraints\SmartFromBrowserConstraint.cs" />
+    <Compile Include="Web\Mvc\Routing\Constraints\SmartLocalhostConstraint.cs" />
+    <Compile Include="Web\Mvc\SmartCsvFileResult.cs" />
+    <Compile Include="Web\Mvc\SmartExcelHtmlFileResult.cs" />
+    <Compile Include="Web\Mvc\SmartExcelXmlFileResult.cs" />
+    <Compile Include="Web\Mvc\SmartJsonResult.cs" />
+    <Compile Include="Web\Mvc\SmartTextResult.cs" />
+    <Compile Include="Web\Mvc\SmartWordHtmlFileResult.cs" />
+    <Compile Include="Web\Mvc\SmartXmlResult.cs" />
+    <Compile Include="Web\SmartAntiXss.cs" />
+    <Compile Include="Web\SmartCookie.cs" />
+    <Compile Include="Web\SmartHtml.cs" />
+    <Compile Include="Web\SmartHttpActionType.cs" />
+    <Compile Include="Web\SmartHttpContext.cs" />
+    <Compile Include="Web\SmartJson.cs" />
+    <Compile Include="Web\SmartMimeType.cs" />
+    <Compile Include="Web\SmartModelObject.cs" />
+    <Compile Include="Web\SmartRequest.cs" />
+    <Compile Include="Web\SmartResponse.cs" />
+    <Compile Include="Web\SmartUrlParameter.cs" />
+    <Compile Include="Web\SmartWebBrowser.cs" />
+    <Compile Include="Windows\SmartWindow.cs" />
+    <Compile Include="Xml\SmartNodeMappingAttribute.cs" />
+    <Compile Include="Xml\SmartXml.cs" />
+    <Compile Include="Xml\SmartXmlMappingType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SmartResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SmartResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IPRegion.gz" />
+    <None Include="Resources\MobilePhone.gz" />
+    <None Include="Resources\WinRar.zip" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sms.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rd /s/q "$(SolutionDir)Publish\$(ProjectName)\"
+xcopy "$(TargetDir)$(TargetName).dll" "$(SolutionDir)Publish\$(ProjectName)\" /i /s /e /y
+xcopy "$(TargetDir)$(TargetName).XML" "$(SolutionDir)Publish\$(ProjectName)\" /i /s /e /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
